@@ -3,18 +3,24 @@
     this repository is to keep my projects and records of this course.
 
 ## Naive Bayes
-    It is classification algorithm which the order of objects doesn't matter.  
-    Using this algorithm I have performed a mini project  
-    Naive Bayes using sklearn.naive_bayes and got accuracy of 97.042%.
+>It is classification algorithm which the order of objects doesn't matter.
+
+>>Using this algorithm I have performed a mini project  
+>>Naive Bayes using sklearn.naive_bayes and got accuracy of 97.042%.
 
 ### Output of Naive Bayes
 ![Naive Bayes Output](/naive_bayes/nb_author_id_output.jpg "Naive Bayes Output")
 
 ## Support Vector Machine  
+>It is another classification algorithm . This algorithm is much slower than  
+>Naive Bayes but we can improve speed by reducing the training data size
+>but this will decreases the accuracy.
 
+>>Using this algorithm I have performed a mini project  
+>>SVM using sklearn.naive_bayes and got accuracy of 99.345%.
 
-
-
+### Output of SVM
+![SVM Output](/svm/svm_author_id_output.jpg "SVM Output")
 
 
 <hr>
