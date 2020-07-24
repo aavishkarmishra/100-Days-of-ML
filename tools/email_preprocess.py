@@ -8,6 +8,14 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectPercentile, f_classif
 
 
+class StrToBytes:
+    def __init__(self, fileobj):
+        self.fileobj = fileobj
+    def read(self, size):
+        return self.fileobj.read(size).encode()
+    def readline(self, size=-1):
+        return self.fileobj.readline(size).encode()
+
 
 def preprocess(words_file = "D:/100-Days-of-ML/tools/word_data.pkl", authors_file="D:/100-Days-of-ML/tools/email_authors.pkl"):
     """ 
@@ -29,16 +37,16 @@ def preprocess(words_file = "D:/100-Days-of-ML/tools/word_data.pkl", authors_fil
     ### the words (features) and authors (labels), already largely preprocessed
     ### this preprocessing will be repeated in the text learning mini-project
     authors_file_handler = open(authors_file, "r")
-    authors = pickle.load(authors_file_handler)
+    authors = pickle.load(StrToBytes(authors_file_handler))
     authors_file_handler.close()
 
     words_file_handler = open(words_file, "r")
-    word_data = pickle.load(words_file_handler)
+    word_data = pickle.load(StrToBytes(words_file_handler))
     words_file_handler.close()
 
     ### test_size is the percentage of events assigned to the test set
     ### (remainder go into training)
-    features_train, features_test, labels_train, labels_test = train_test_split(word_data, authors, test_size=0.15, random_state=42)
+    features_train, features_test, labels_train, labels_test = train_test_split(word_data, authors, test_size=0.2, random_state=42)
 
 
 
