@@ -6,7 +6,7 @@
 >It is classification algorithm which the order of objects doesn't matter.
 
 >>Using this algorithm I have performed a mini project  
->>Naive Bayes using sklearn.naive_bayes and got accuracy of 97.042%.
+>>[Naive Bayes](/naive_bayes/nb_author_id.py) using sklearn.naive_bayes and got accuracy of 97.042%.
 
 ### Output of Naive Bayes
 ![Naive Bayes Output](/naive_bayes/nb_author_id_output.jpg "Naive Bayes Output")
@@ -17,7 +17,7 @@
 >but this will decreases the accuracy.
 
 >>Using this algorithm I have performed a mini project  
->>SVM using sklearn.naive_bayes and got accuracy of 99.345%.
+>>[SVM](/svm/svm_author_id.py) using sklearn.naive_bayes and got accuracy of 99.345%.
 
 ### Output of SVM
 ![SVM Output](/svm/svm_author_id_output.jpg "SVM Output")
