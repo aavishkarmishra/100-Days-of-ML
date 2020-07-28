@@ -22,7 +22,10 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 ![SVM Output](/svm/svm_author_id_output.jpg "SVM Output")
 
 ## Desion Trees
-
+>It also a classification algorithm but it is also used for regression.  
+>It have several parameters for tuning.  
+>In desion trees there are some formula for calulating some of them  
+>**Entropy** is the number of entropy or is equal to `sum of(-(pi*log(pi,2))`  
 
 <hr>
 
