@@ -34,7 +34,6 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 >**Entropy** is the number of impurity or is equal to `sum of(-(pi*log(pi,2))`  
 >**Information Gain** is equal to `Entropy(parent)-(weighted average)Entropy(chidlren)`  
 > Decision Trees algorithm tries to **maximize the Information gain** and **minimize the Entropy**
-<br>
 >>Using this algorithm I have performed a mini project  
 >>[decision_tree](/decision_tree/dt_author_id.py) using **sklearn's decision tree** and got **accuracy of %**.
 
