@@ -35,7 +35,7 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 >**Information Gain** is equal to `Entropy(parent)-(weighted average)Entropy(chidlren)`  
 > Decision Trees algorithm tries to **maximize the Information gain** and **minimize the Entropy**
 >>Using this algorithm I have performed a mini project  
->>[decision_tree](/decision_tree/dt_author_id.py) using **sklearn's decision tree** and got **accuracy of 97.866%**.
+>>[decision_tree](/decision_tree/dt_author_id.py) using **sklearn's decision tree** and got **accuracy of 97.923%**.
 
 ### Output of Decision Tree
 

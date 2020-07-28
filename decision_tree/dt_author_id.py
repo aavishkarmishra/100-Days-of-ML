@@ -40,7 +40,6 @@ from sklearn.metrics import accuracy_score
 
 acc = accuracy_score(labels_test,pred)
 
-print("Accuracy : ",acc,"%")
+print("Accuracy : ",acc*100,"%")
 
-print("No of features :", len(features_train[0]))
 #########################################################
