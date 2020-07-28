@@ -10,7 +10,7 @@
     
 import sys
 from time import time
-sys.path.append("../tools/")
+sys.path.append("D:/100-Days-of-ML/tools/")
 from email_preprocess import preprocess
 
 
@@ -25,7 +25,22 @@ features_train, features_test, labels_train, labels_test = preprocess()
 #########################################################
 ### your code goes here ###
 
+from sklearn import tree
 
+clf = tree.DecisionTreeClassifier(min_samples_split=40)
+
+t1=time()
+clf = clf.fit(features_train,labels_train)
+print ("Time to train : ", round(time() - t1, 3))
+
+t2=time()
+pred = clf.predict(features_test)
+print ("Time to predict : ", round(time() - t2, 3))
+from sklearn.metrics import accuracy_score
+
+acc = accuracy_score(labels_test,pred)
+
+print("Accuracy : ",acc,"%")
+
+print("No of features :", len(features_train[0]))
 #########################################################
-
-
