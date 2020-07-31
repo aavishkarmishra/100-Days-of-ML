@@ -41,6 +41,27 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 
 ![Decision Tree Output](/decision_tree/dt_author_id_output.jpg "Decision Tree Output")
 
+## Choose Your Own 
+
+### K nearest neighbors
+
+>In supervised learning, this algorithm uses user-defined no of  
+>neighbors to give the lable of a new point. This algorithm is used  
+> for both classification and regression.
+
+### AdaBoost
+
+### Random Forest
+
+
+
+>>Using these algorithms I have performed a mini project  
+>>[choose_your_own](/choose_your_own) using **sklearn** and got **accuracy of 94% (K-nearest neighbors), 92,4% (AdaBoost) & 92.4% (Random Forest)**.
+
+
+### Output of Choose_your_own
+
+![Choose_your_oen Output](/choose_your_own/your_algorithm_output.jpg "Choose your own Output")
 
 <hr>
 
