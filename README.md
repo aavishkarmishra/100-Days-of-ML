@@ -49,11 +49,15 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 >neighbors to give the lable of a new point. This algorithm is used  
 > for both classification and regression.
 
-### AdaBoost
-
+### AdaBoost(**Ada**ptive **Boost**ing)
+>AdaBoost (Adaptive Boosting) is a very popular boosting technique  
+that aims at combining multiple weak classifiers to build one strong classifier.  
+>*For detailed information* [AdaBoost](https://blog.paperspace.com/adaboost-optimizer/#:~:text=AdaBoost%20is%20an%20ensemble%20learning,turn%20them%20into%20strong%20ones.)
 ### Random Forest
-
-
+>Random forests or random decision forests are an ensemble learning method for classification,  
+>regression and other tasks that operate by constructing a multitude of decision trees at training time and  
+>outputting the class that is the mode of the classes (classification) or mean prediction (regression)  
+>of the individual trees.
 
 >>Using these algorithms I have performed a mini project  
 >>[choose_your_own](/choose_your_own) using **sklearn** and got **accuracy of 94% (K-nearest neighbors), 92,4% (AdaBoost) & 92.4% (Random Forest)**.
