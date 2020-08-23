@@ -12,12 +12,24 @@
     You fill in the regression code where indicated:
 """    
 
+import sys
+
+content = ''
+outsize = 0
+with open('D:/100-Days-of-ML/final_project/final_project_dataset_modified.pkl', 'rb') as infile:
+  content = infile.read()
+with open('D:/100-Days-of-ML/final_project/final_project_dataset_modified_new.pkl', 'wb') as output:
+  for line in content.splitlines():
+    outsize += len(line) + 1
+    output.write(line + b'\n')
+
+print("Done. Saved %s bytes." % (len(content)-outsize))
 
 import sys
 import pickle
-sys.path.append("../tools/")
+sys.path.append("D:/100-Days-of-ML/tools/")
 from feature_format import featureFormat, targetFeatureSplit
-dictionary = pickle.load( open("../final_project/final_project_dataset_modified.pkl", "r") )
+dictionary = pickle.load( open("D:/100-Days-of-ML/final_project/final_project_dataset_modified_new.pkl", "rb") )
 
 ### list the features you want to look at--first item in the 
 ### list will be the "target" feature
@@ -26,10 +38,10 @@ data = featureFormat( dictionary, features_list, remove_any_zeroes=True)
 target, features = targetFeatureSplit( data )
 
 ### training-testing split needed in regression, just like classification
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 feature_train, feature_test, target_train, target_test = train_test_split(features, target, test_size=0.5, random_state=42)
 train_color = "b"
-test_color = "b"
+test_color = "r"
 
 
 
@@ -37,7 +49,8 @@ test_color = "b"
 ### Please name it reg, so that the plotting code below picks it up and 
 ### plots it correctly. Don't forget to change the test_color above from "b" to
 ### "r" to differentiate training points from test points.
-
+from sklearn.linear_model import LinearRegression
+reg = LinearRegression().fit(feature_train,target_train)
 
 
 
