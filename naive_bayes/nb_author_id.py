@@ -12,7 +12,7 @@
     
 import sys
 from time import time
-sys.path.append("D:/100-Days-of-ML/tools/")
+sys.path.append("/media/aavishkar/Data/100-Days-of-ML/tools/")
 from email_preprocess import preprocess
 
 

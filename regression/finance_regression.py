@@ -11,7 +11,7 @@
 
     You fill in the regression code where indicated:
 """    
-
+'''
 import sys
 
 content = ''
@@ -23,13 +23,13 @@ with open('D:/100-Days-of-ML/final_project/final_project_dataset_modified_new.pk
     outsize += len(line) + 1
     output.write(line + b'\n')
 
-print("Done. Saved %s bytes." % (len(content)-outsize))
+print("Done. Saved %s bytes." % (len(content)-outsize))'''
 
 import sys
 import pickle
-sys.path.append("D:/100-Days-of-ML/tools/")
+sys.path.append("/media/aavishkar/Data/100-Days-of-ML/tools/")
 from feature_format import featureFormat, targetFeatureSplit
-dictionary = pickle.load( open("D:/100-Days-of-ML/final_project/final_project_dataset_modified_new.pkl", "rb") )
+dictionary = pickle.load( open("/media/aavishkar/Data/100-Days-of-ML/final_project/final_project_dataset_modified_new.pkl", "rb") )
 
 ### list the features you want to look at--first item in the 
 ### list will be the "target" feature
