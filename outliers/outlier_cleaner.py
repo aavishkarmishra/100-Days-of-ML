@@ -14,7 +14,26 @@ def outlierCleaner(predictions, ages, net_worths):
     cleaned_data = []
 
     ### your code goes here
+    error = []
 
+    ### finds all the squared errors for values in the training set
+    for i in range(0, len(ages)):
+        value = pow((predictions[i]-net_worths[i]),2)
+        error.insert(i, value)
+        
+    size = int(len(error) * 0.1)
+    error.sort(reverse=True)   
+    
+    ### Remove the top 10% of data that has the most error
+    thresh = error[size]
+    
+    ###Create the cleaned dataset
+    index = 0
+    for i in range(0, len(ages)):
+        value = pow((predictions[i]-net_worths[i]),2)
+        if(value <= thresh):
+            cleaned_data.insert(index, [ages[i],net_worths[i], value])
+            index += 1
     
     return cleaned_data
 
