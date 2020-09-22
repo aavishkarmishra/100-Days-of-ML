@@ -16,9 +16,9 @@ import sys
 
 content = ''
 outsize = 0
-with open('D:/100-Days-of-ML/final_project/final_project_dataset_modified.pkl', 'rb') as infile:
+with open('../final_project/final_project_dataset_modified.pkl', 'rb') as infile:
   content = infile.read()
-with open('D:/100-Days-of-ML/final_project/final_project_dataset_modified_new.pkl', 'wb') as output:
+with open('../final_project/final_project_dataset_modified_new.pkl', 'wb') as output:
   for line in content.splitlines():
     outsize += len(line) + 1
     output.write(line + b'\n')
@@ -27,9 +27,9 @@ print("Done. Saved %s bytes." % (len(content)-outsize))'''
 
 import sys
 import pickle
-sys.path.append("/media/aavishkar/Data/100-Days-of-ML/tools/")
+sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
-dictionary = pickle.load( open("/media/aavishkar/Data/100-Days-of-ML/final_project/final_project_dataset_modified_new.pkl", "rb") )
+dictionary = pickle.load( open("../final_project/final_project_dataset_modified.pkl", "rb") )
 
 ### list the features you want to look at--first item in the 
 ### list will be the "target" feature
@@ -49,8 +49,21 @@ test_color = "r"
 ### Please name it reg, so that the plotting code below picks it up and 
 ### plots it correctly. Don't forget to change the test_color above from "b" to
 ### "r" to differentiate training points from test points.
+from time import time
 from sklearn.linear_model import LinearRegression
-reg = LinearRegression().fit(feature_train,target_train)
+reg = LinearRegression()
+t = time()
+reg.fit(feature_train, target_train)
+print ("Time to train: ", round(time() - t, 3))
+t = time()
+pred = reg.predict(feature_test)
+print ("Time to predict: ", round(time() - t, 3))
+acc = reg.score(feature_test, target_test)
+print("Accuracy: ",acc*100,"%")
+coeff = reg.coef_
+inter = reg.intercept_
+print ("Coefficient: ",coeff)
+print ("Intercept: " , inter)
 
 
 

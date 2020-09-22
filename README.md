@@ -7,11 +7,11 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 It is classification algorithm which the order of objects doesn't matter.
 
 >Using this algorithm I have performed a mini project  
-[Naive Bayes](/naive_bayes/nb_author_id.py) using **sklearn.naive_bayes** and got **accuracy of 97.042%**.
+[Naive Bayes](./naive_bayes/nb_author_id.py) using **sklearn.naive_bayes** and got **accuracy of 97.042%**.
 
-### Output of Naive Bayes
+- ### Output of Naive Bayes
 
-![Naive Bayes Output](/naive_bayes/nb_author_id_output.jpg "Naive Bayes Output")
+    ![Naive Bayes Output](./naive_bayes/nb_author_id_output.jpg "Naive Bayes Output")
 
 ## Support Vector Machine  
 
@@ -20,51 +20,71 @@ It is another classification algorithm . This algorithm **is much slower than**
 but this will decreases the accuracy.
 
 >Using this algorithm I have performed a mini project  
-[SVM](/svm/svm_author_id.py) using **sklearn's svm** and got **accuracy of 99.345%**.
+[SVM](./svm/svm_author_id.py) using **sklearn's svm** and got **accuracy of 99.345%**.
 
-### Output of SVM
+- ### Output of SVM
 
-![SVM Output](/svm/svm_author_id_output.jpg "SVM Output")
+    ![SVM Output](./svm/svm_author_id_output.jpg "SVM Output")
 
 ## Decision Trees
 
 It also a classification algorithm but it is also used for regression.  
 It have several parameters for tuning.  
 In decision trees there are some formula for calulating some of them  
-* **Entropy** is the number of impurity or is equal to `sum of(-(pi*log(pi,2))`  
-* **Information Gain** is equal to `Entropy(parent)-(weighted average)Entropy(chidlren)`  
-* Decision Trees algorithm tries to **maximize the Information gain** and **minimize the Entropy**
+- **Entropy** is the number of impurity or is equal to `sum of(-(pi*log(pi,2))`  
+- **Information Gain** is equal to `Entropy(parent)-(weighted average)Entropy(chidlren)`  
+- Decision Trees algorithm tries to **maximize the Information gain** and **minimize the Entropy**
 >Using this algorithm I have performed a mini project  
-[decision_tree](/decision_tree/dt_author_id.py) using **sklearn's decision tree** and got **accuracy of 97.923%**.
+[decision_tree](./decision_tree/dt_author_id.py) using **sklearn's decision tree** and got **accuracy of 97.923%**.
 
-### Output of Decision Tree
+- ### Output of Decision Tree
 
-![Decision Tree Output](/decision_tree/dt_author_id_output.jpg "Decision Tree Output")
+    ![Decision Tree Output](./decision_tree/dt_author_id_output.jpg "Decision Tree Output")
 
 ## Choose Your Own 
 
-### 1. **K nearest neighbors** 
-In supervised learning, this algorithm uses user-defined no of  
-neighbors to give the lable of a new point. This algorithm is used  
-for both classification and regression.
+1. ### **K nearest neighbors (KNN)** 
+    In supervised learning, this algorithm uses user-defined no of  
+    neighbors to give the lable of a new point. This algorithm is used  
+    for both classification and regression.
 
-### 2. **AdaBoost(*Ada*ptive *Boost*ing)**
-AdaBoost (Adaptive Boosting) is a very popular boosting technique  
-that aims at combining multiple weak classifiers to build one strong classifier.  
-*For detailed information* [AdaBoost](https://blog.paperspace.com/adaboost-optimizer/#:~:text=AdaBoost%20is%20an%20ensemble%20learning,turn%20them%20into%20strong%20ones.)
-### 3. **Random Forest**
-Random forests or random decision forests are an ensemble learning method for 
-classification,regression and other tasks that operate by constructing a multitude of decision
-trees at training time and outputting the class that is the mode of the classes (classification)
-or mean prediction (regression) of the individual trees.
+2. ### **AdaBoost(*Ada*ptive *Boost*ing)**
+    AdaBoost (Adaptive Boosting) is a very popular boosting technique  
+    that aims at combining multiple weak classifiers to build one strong classifier.  
+    *For detailed information* [AdaBoost](https://blog.paperspace.com/adaboost-optimizer/#:~:text=AdaBoost%20is%20an%20ensemble%20learning,turn%20them%20into%20strong%20ones.)
+3. ### **Random Forest**
+    Random forests or random decision forests are an ensemble learning method for 
+    classification,regression and other tasks that operate by constructing a multitude of decision
+    trees at training time and outputting the class that is the mode of the classes (classification)
+    or mean prediction (regression) of the individual trees.
 
 >Using these algorithms I have performed a mini project  
-[choose_your_own](/choose_your_own) using **sklearn** and got **accuracy of 94% (K-nearest neighbors), 92,4% (AdaBoost) & 92.4% (Random Forest)**.
+[choose_your_own](./choose_your_own) using **sklearn** and got **accuracy of 94% (K-nearest neighbors), 92,4% (AdaBoost) & 92.4% (Random Forest)**.
 
 
-### Output of Choose_your_own
+- ### Output of Choose_your_own
 
-![Choose_your_oen Output](/choose_your_own/your_algorithm_output.jpg "Choose your own Output")
+    ![Choose_your_own Output](./choose_your_own/your_algorithm_output.jpg "Choose your own Output")
+
+## Regression
+
+### Linear Regression
+
+- ### Output of regression
+    ![](./regression/Figure_1.png "Linear Regression Output")
+
+## Outliers
+
+### Outliers Removal
+- ### **Before Removal**
+    ![](./outliers/Figure_2.png "")
+- ### **After Removal**
+    ![](./outliers/Figure_1.png "")
+
+## Clustering
+
+### K-Means Clustering
+
 
 <hr>
 
