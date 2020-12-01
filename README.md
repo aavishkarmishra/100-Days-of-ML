@@ -6,8 +6,8 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 
 ## Naive Bayes
 
-    Naive Bayes methods are a set of supervised learning algorithms based  on applying Bayes’ theorem with the “naive” assumption of conditional   independence between every pair of features given the value of the class variable  
-    It is classification algorithm which the order of objects doesn't matter.  
+Naive Bayes methods are a set of supervised learning algorithms based on applying Bayes’ theorem with the “naive” assumption of conditional independence between every pair of features given the value of the class variable  
+ It is classification algorithm which the order of objects doesn't matter.
 
 > Using this algorithm I have performed a mini project  
 > [Naive Bayes](./naive_bayes/nb_author_id.py) using **sklearn.naive_bayes** and got **accuracy of 97.042%**.
@@ -20,7 +20,7 @@ Joined udacity's [Intro to Machine Learning](https://www.udacity.com/course/intr
 
 ## Support Vector Machine
 
-    Support-vector machines (SVMs, also support-vector networks[1]) are    supervised learning models with associated learning algorithms that  analyze data used for classification and regression analysis.  
+Support-vector machines (SVMs, also support-vector networks[1]) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis.
 
 It is another classification algorithm . This algorithm **is much slower than** **Naive Bayes** but we can improve speed by reducing the training data size
 but this will decreases the accuracy.
@@ -36,7 +36,7 @@ but this will decreases the accuracy.
 
 ## Decision Trees
 
-    Decision Trees are a type of Supervised Machine Learning (that is you  explain what the input is and what the corresponding output is in the  training data) where the data is continuously split according to a  certain parameter. The tree can be explained by two entities, namely  decision nodes and leaves.
+Decision Trees are a type of Supervised Machine Learning (that is you explain what the input is and what the corresponding output is in the training data) where the data is continuously split according to a certain parameter. The tree can be explained by two entities, namely decision nodes and leaves.
 
 - **Entropy** is the number of impurity or is equal to `sum of(-(pi*log(pi,2))`
 - **Information Gain** is equal to `Entropy(parent)-(weighted average)Entropy(chidlren)`
@@ -55,7 +55,7 @@ but this will decreases the accuracy.
 
 1. ### **K nearest neighbors (KNN)**
 
-    In supervised learning, this algorithm uses user-defined no of  neighbors to give the lable of a new point. This algorithm is used for  both classification and regression.
+   In supervised learning, this algorithm uses user-defined no of neighbors to give the lable of a new point. This algorithm is used for both classification and regression.
 
 2. ### **AdaBoost(*Ada*ptive *Boost*ing)**
    AdaBoost (Adaptive Boosting) is a very popular boosting technique that aims at combining multiple weak classifiers to build one strong classifier.  
@@ -74,7 +74,7 @@ but this will decreases the accuracy.
 
 ## Linear Regression
 
-    Linear Regression is a supervised machine learning algorithm where the  predicted output is continuous and has a constant slope. It's used to predict  values within a continuous range, (e.g. sales, price) rather than trying to  classify them into categories.
+Linear Regression is a supervised machine learning algorithm where the predicted output is continuous and has a constant slope. It's used to predict values within a continuous range, (e.g. sales, price) rather than trying to classify them into categories.
 
 - ### Output of regression
   ![](./regression/Figure_1.png "Linear Regression Output")
@@ -83,11 +83,11 @@ but this will decreases the accuracy.
 
 ## Outliers
 
-    An outlier is an object that deviates significantly from the rest of  the objects. They can be caused by measurement or execution error. The  analysis of outlier data is referred to as outlier analysis or outlier  mining.
+An outlier is an object that deviates significantly from the rest of the objects. They can be caused by measurement or execution error. The analysis of outlier data is referred to as outlier analysis or outlier mining.
 
 ### Detecting Outlier:
 
-    In the K-Means clustering technique, each cluster has a mean value.  Objects belong to the cluster whose mean value is closest to it. In  order to identify the Outlier, firstly we need to initialize the  threshold value such that any distance of any data point greater than  it from its nearest cluster identifies it as an outlier for our  purpose. Then we need to find the distance of the test data to each  cluster mean. Now, if the distance between the test data and the  closest cluster to it is greater than the threshold value then we will  classify the test data as an outlier.
+In the K-Means clustering technique, each cluster has a mean value. Objects belong to the cluster whose mean value is closest to it. In order to identify the Outlier, firstly we need to initialize the threshold value such that any distance of any data point greater than it from its nearest cluster identifies it as an outlier for our purpose. Then we need to find the distance of the test data to each cluster mean. Now, if the distance between the test data and the closest cluster to it is greater than the threshold value then we will classify the test data as an outlier.
 
 - ### **Before Removal**
   ![](./outliers/Figure_2.png)
@@ -98,7 +98,7 @@ but this will decreases the accuracy.
 
 ## K-Means Clustering
 
-    K-means algorithm identifies k number of centroids, and then allocates  every data point to the nearest cluster, while keeping the centroids as small as  possible.
+K-means algorithm identifies k number of centroids, and then allocates every data point to the nearest cluster, while keeping the centroids as small as possible.
 
 ### Output Cluster
 
@@ -110,7 +110,7 @@ but this will decreases the accuracy.
 
 ### Bag of words model
 
-    Text Analysis is a major application field for machine learning  algorithms. However the raw data, a sequence of symbols cannot be fed  directly to the algorithms themselves as most of them expect numerical  feature vectors with a fixed size rather than the raw text documents  with variable length.
+Text Analysis is a major application field for machine learning algorithms. However the raw data, a sequence of symbols cannot be fed directly to the algorithms themselves as most of them expect numerical feature vectors with a fixed size rather than the raw text documents with variable length.
 
 In order to address this, scikit-learn provides utilities for the most common ways to extract numerical features from text content, namely:
 
@@ -129,7 +129,7 @@ We call **vectorization** the general process of turning a collection of text do
 
 ## Feature Selection
 
-    There are several go-to methods of automatically selecting your  features in sklearn. Many of them fall under the umbrella of  univariate feature selection, which treats each feature independently  and asks how much power it gives you in classifying or regressing.  
+There are several go-to methods of automatically selecting your features in sklearn. Many of them fall under the umbrella of univariate feature selection, which treats each feature independently and asks how much power it gives you in classifying or regressing.
 
 There are two big univariate feature selection tools in sklearn: SelectPercentile and SelectKBest.  
 The difference is pretty apparent by the names: SelectPercentile selects the X% of features that are most powerful (where X is a parameter) and SelectKBest selects the K features that are most powerful (where K is a parameter).
@@ -144,11 +144,11 @@ A clear candidate for feature reduction is text learning, since the data has suc
 
 ## PCA
 
-    PCA performs eigenvalue decomposition and reduces dimensions whilst  preserving information by maximising the varaince of the components
+PCA performs eigenvalue decomposition and reduces dimensions whilst preserving information by maximising the varaince of the components
 
 ### Eigenfaces
 
-    Eigenfaces is a facial identification problem LFW dataset and the  model must predict the names for the faces based on the SVM(Support  Vector Machine) classifier which receives an input whose dimensions  are reduced using PCA (from 1850 to 150).
+Eigenfaces is a facial identification problem LFW dataset and the model must predict the names for the faces based on the SVM(Support Vector Machine) classifier which receives an input whose dimensions are reduced using PCA (from 1850 to 150).
 
 - Here are the results for a few of them:  
    ![](pca/Figure_2.png)
