@@ -15,35 +15,15 @@
     
 """
 
-#!/usr/bin/env python
-"""
-convert dos linefeeds (crlf) to unix (lf)
-usage: dos2unix.py <input> <output>
-"""
-"""import sys
-
-content = ''
-outsize = 0
-with open('D:/100-Days-of-ML/final_project/final_project_dataset.pkl', 'rb') as infile:
-  content = infile.read()
-with open('D:/100-Days-of-ML/final_project/final_project_dataset_new.pkl', 'wb') as output:
-  for line in content.splitlines():
-    outsize += len(line) + 1
-    output.write(line + b'\n')
-
-print("Done. Saved %s bytes." % (len(content)-outsize))"""
-
 import pickle
 
-enron_data = pickle.load(open('D:/100-Days-of-ML/final_project/final_project_dataset_new.pkl', 'rb'))
-
-print("Loading done.")
-
-"""count = 0
+enron_data = pickle.load(
+    open("../final_project/final_project_dataset.pkl", "rb"))
+names = open("../final_project/poi_names.txt", "r")
+count = 0
 for i in enron_data:
-    if enron_data[i]['poi']:
+    val = enron_data[i]["salary"]
+    if(val != "NaN"):
         count += 1
-print (count)"""
-
-print(enron_data["SKILLING JEFFREY K"])
-
+        print(i, " ", val)
+print(count)

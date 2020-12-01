@@ -7,43 +7,37 @@
     Sara has label 0
     Chris has label 1
 """
-    
+
+from sklearn.metrics import accuracy_score
+from sklearn import svm
+from email_preprocess import preprocess
 import sys
 from time import time
 sys.path.append("/media/aavishkar/Data/100-Days-of-ML/tools/")
-from email_preprocess import preprocess
 
 
-### features_train and features_test are the features for the training
-### and testing datasets, respectively
-### labels_train and labels_test are the corresponding item labels
+# features_train and features_test are the features for the training
+# and testing datasets, respectively
+# labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
-
-
 
 
 #########################################################
 ### your code goes here ###
 
-from sklearn import svm
 
-
-
-clf = svm.SVC(kernel='rbf',C= 10000.0)
+clf = svm.SVC(kernel='rbf', C=10000.0)
 
 t1 = time()
 clf.fit(features_train, labels_train)
-print ("Time to train: ", round(time() - t1, 3))
+print("Time to train: ", round(time() - t1, 3))
 
 t2 = time()
-pred=clf.predict(features_test)
-print ("Time to predict: ", round(time() - t2, 3))
+pred = clf.predict(features_test)
+print("Time to predict: ", round(time() - t2, 3))
 
-from sklearn.metrics import accuracy_score
 acc = accuracy_score(pred, labels_test)
-print("Accuracy=",acc*100,"%")
+print("Accuracy=", acc*100, "%")
 
 
 #########################################################
-
-
